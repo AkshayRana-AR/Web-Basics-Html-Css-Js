@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    
+
+    <br>
+
+    <script>
+
+        localStorage.setItem(1,1);
+        localStorage.setItem("title","Javascript Advanced");
+        localStorage.setItem("description","Till this date 1/7/21 I will complete!");
+        localStorage.setItem("enddate","2/7/21");
+        localStorage.setItem("status","Progress");
+console.log(localStorage);
+
+
+
+        console.log(localStorage.getItem("title"));
+
+        console.log(localStorage.length);
+
+        localStorage.removeItem("title");
+
+        //localStorage.clear();
+        console.log(localStorage.key(2));//index number
+
+
+
+
+    </script>
+</body>
+</html>

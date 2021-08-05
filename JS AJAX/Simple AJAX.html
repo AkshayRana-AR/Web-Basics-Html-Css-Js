@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Akshay's Code Vs AJAX Technology</h1>
+    <p id="txtarea1">This Will Change! Savvy?</p>
+    <button onclick="retrieve1()" >Click Me! I will retrieve Data for You!</button>
+    
+    <button onclick="retrieve2()" >Click Me!</button>
+    <p id="txtarea2" ></p>
+   <script>
+
+        function retrieve1()
+        {
+            const xhttp=new XMLHttpRequest();
+            xhttp.onload=function()
+            {
+                document.getElementById("txtarea1").innerHTML=xhttp.responseText;
+            }
+            xhttp.open("GET","Notes.txt",true);
+            xhttp.send();
+        }
+
+        function retrieve2()
+        {
+            const xhttp=new XMLHttpRequest();
+            xhttp.onload=function()
+            {
+                document.getElementById("txtarea2").innerHTML=xhttp.responseText;
+            }
+            xhttp.open("GET","Htmlfile.html",true);
+            xhttp.send();
+
+        }
+        
+
+    </script>
+</body>
+</html>

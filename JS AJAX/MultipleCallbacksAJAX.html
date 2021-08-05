@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Multiple  AJAX Task</h1>
+    <h3>First Task: </h3><br>
+    <p id="text1area"></p><br>
+    <h3>Second Task:</h3><br>
+    <p id="text2area"></p><br>
+    <button onclick="clickfirsttask()">Click me to execute First task</button>
+    <button onclick="clicksecondtask()">Click me to load First task</button>
+<script>
+    //If you have more than one AJAX task in a website, 
+    //you should create one function for executing the XMLHttpRequest object,
+    // and one callback function for each AJAX task.
+    function clickfirsttask()
+    {
+        ajaxexecutor("Notes.txt",firsttask);
+    }
+    function clicksecondtask()
+    {
+        ajaxexecutor("Htmlfile.html",secondtask);
+    }
+   
+
+    function ajaxexecutor(url,callbackfunction)
+    {
+        const xhttp=new XMLHttpRequest();
+        xhttp.onload=function(){
+            callbackfunction(xhttp);
+        }
+        xhttp.open("GET",url,true);
+        xhttp.send();
+    }
+
+    function firsttask(xhttp)
+    {
+        document.getElementById("text1area").innerHTML=xhttp.responseText;
+    }
+    function secondtask(xhttp)
+    {
+        document.getElementById("text2area").innerHTML=xhttp.responseText;
+    }
+
+
+
+
+</script>
+      
+</body>
+</html>

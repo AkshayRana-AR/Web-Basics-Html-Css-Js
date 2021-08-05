@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+    <h1>This is AJAX-The Saviour</h1>
+</div>
+    <button id="clickbtn" onclick="loaddata()">Click Me To bring Data</button>
+    
+
+    <script>
+      
+   function loaddata()
+   {
+        var xhttp=new XMLHttpRequest();
+
+       xhttp.onload=function()
+        {
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+        xhttp.open("GET","https://www.w3schools.com/js/js_ajax_examples.asp",true);
+    xhttp.send();
+
+   }
+   
+    
+     
+
+    </script>
+</body>
+</html>

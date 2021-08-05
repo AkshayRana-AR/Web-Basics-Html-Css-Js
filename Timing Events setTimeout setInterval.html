@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Timing Events</title>
+</head>
+<body>
+    <h1>JS Timing Events 1)setTimeout(function,milliseconds)  2)setInterval(function,milliseconds)</h1>
+    <br><br><h2 id="showtime"></h2>
+  <script>
+        //setTimeout ->Executes a function, after waiting a specified number of milliseconds.
+        ////setInterval ->Executes a function, after waiting a specified number of milliseconds.
+        
+//setTimeout
+      //  console.log(1);
+        //Only function name should be passed no Parenthesis  
+        id=setTimeout(greet,3000,"AR");//After 3 sec this will be printed   //returns id if u want to use later
+         console.log(id);
+
+        function greet(name){console.log("Hello "+name+"!");} 
+
+        clearTimeout(id);// to clear timeout eg. if u want toshow signup after 20sec to user, and if he already has done signup within 20sec then showing that is useless
+
+
+//setInterval
+        //The setInterval() method repeats a given function at every given time-interval.
+        //After every interval, function will be called
+
+       // setInterval(greet,1000,"Akshay Rana");
+        Iid=setInterval(greet,1000,"Mr. Akshay Rana");  //this also returns id
+        console.log(Iid);
+        clearInterval(Iid);
+
+
+        function displayTime()
+        {
+            time = new Date();
+            document.getElementById("showtime").innerHTML=time;
+        }
+setInterval(displayTime,1000);
+
+</script>    
+</body>
+</html>

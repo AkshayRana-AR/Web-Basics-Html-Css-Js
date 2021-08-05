@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        //For Loop
+        function forloop(n)
+        {
+            for(var i=1;i<=n;i++)
+            {
+                console.log(i);
+            }
+        }
+        
+        console.log("For-loop starts:");
+        forloop(10);
+
+        //While Loop
+        function whileloop(n)
+        {
+            var n=1;
+            while(n<=10)
+            {
+                console.log("while-loop : "+n);
+                n++;
+            }
+        }
+        
+        console.log("While-loop starts:");
+        whileloop(10);
+
+        //Do While Loop
+        function dowhileloop(n)
+        {
+            var n=1;
+            do
+            {
+                console.log("do-while-loop : "+n);
+                n++;
+            }
+            while(n<=10);
+        }
+        
+        console.log("\nDo-While-loop starts:\n\n");
+        dowhileloop(10);
+
+
+        //array iteration
+        console.log("\nIterating an:\n\n");
+        var arr=[1,2,3,4,5,6,7,8,9,0]
+        for(var i=0;i<arr.length;i++)
+        {
+            console.log(arr[i]);
+        }
+
+    </script>
+</body>
+</html>

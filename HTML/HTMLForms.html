@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Tutorialspoint if u wanna visit
+  HTML Forms are required, when you want to collect some data from the site visitor. For example, during user registration you would like to collect information such as name, email address, credit card, etc.
+A form will take input from the site visitor and then will post it to a back-end application such as CGI, ASP Script or PHP script etc. The back-end application will perform required processing on the passed data based on defined business logic inside the application.
+There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.
+    -->
+  <form action="submit()" method="GET|POST">
+             First Name: <input type="text" name="first_name"></input>
+    <br>
+             Last name: <input type = "text" name = "last_name" />
+    <br>
+            Password: <input type = "password" name = "password" />
+     <br>
+        Confirm Password: <input type = "password" name = "confirm_password" />
+        <br/>
+        Description : <br />
+         <textarea rows = "5" cols = "50" name = "description">
+            Enter description here...
+         </textarea>
+<br/>
+         
+            <input type = "checkbox" name = "maths" value = "on">Node</input>
+            <input type = "checkbox" name = "physics" value = "on"> Angular</input>
+           
+<br/>
+            <input type = "radio" name = "subject" value = "maths"> Node</input>
+            <input type = "radio" name = "subject" value = "physics"> React</input>
+        
+         
+<br/>
+                <select name = "dropdown">
+                   <option value = "Maths" selected>React</option>
+                   <option value = "Physics">Angular</option>
+                </select>
+         
+<br/>
+<br/>  
+                <input type = "submit" name = "submit" value = "Submit" />
+                <input type = "reset" name = "reset"  value = "Reset" />
+                <input type = "button" name = "ok" value = "OK" />
+                <br/>
+                <br/>
+                <input type = "image" name = "imagebutton" src = "latios.jpg"
+                width="200" height="150" />
+            
+
+  </form>
+</body>
+</html>

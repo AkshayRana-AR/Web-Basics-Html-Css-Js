@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>        <!--For center text-->
+        Hi, This is <i><u><b>Akshay</b></u></i>!
+    </center>
+    <hr/>       <!--For horizontal line-->
+
+	<!--Preserve Formatting
+Sometimes, you want your text to follow the exact format of how it is written in the HTML document.
+ In these cases, you can use the preformatted tag <pre>.
+Any text between the opening <pre> tag and the closing
+ </pre> tag will preserve the formatting of the source document. try without it following-->
+      <pre>
+         function testFunction( strText ){
+            alert (strText)
+         }
+      </pre>
+  
+<!--html Attributes-->
+      <p align = "left">This is left aligned</p> 
+      <p align = "center">This is center aligned</p> 
+      <p align = "right">This is right aligned</p> 
+
+
+<!--Core Attributes
+The four core attributes that can be used on the majority of HTML elements (although not all) are −
+
+id  - To Uniquely Identifies element
+title   -The title attribute gives a suggested title for the element.
+            Now try to bring your cursor over "Titled Heading Tag Example" and 
+            you will see that whatever title you used in your code is coming out as a 
+            tooltip of the cursor.
+class   -The class attribute is used to associate an element with a style sheet, and 
+            specifies the class of element. 
+style   -The style attribute allows you to specify Cascading Style Sheet (CSS) rules
+             within the element.   -->
+
+<p id="firstid">This has a id! Shhhhh..</p>
+<p title="You are A Champ!">Bring Cursor over Me! I will tell you something!</p>
+    
+<p style = "font-family:arial; color:rgb(255, 123, 0); font-size: large;">Hey! I Used Style Attribute! Because of that I am looking Beautiful.</p>
+
+<!--Other common HTML attributes:
+    align   -Horizontally aligns tags   Values:-    right, left, center
+    valign  -Vertically aligns tags within an HTML element. Values:-    top, middle, bottom
+    bgcolor
+-->
+
+
+<!--
+        Grouping Content
+                The <div> and <span> elements allow you to group together several elements to create
+                sections or subsections of a page.
+-->
+
+        <div id = "menu" align = "middle" >
+            <a href = "">Home</a> | 
+            <a href = "https://www.google.com/">Google</a> | 
+            <a href = "https://www.w3schools.com/html">W3schools</a>
+        </div>
+
+        <div id = "content" align = "left" >
+            <h5>Content Articles</h5>
+            <p>Actual content goes here.....</p>
+         </div>
+
+<!--
+    The <span> element, on the other hand, can be used to group inline elements only.
+     So, if you have a part of a sentence or paragraph which you want to group together, 
+     you could use the <span> element as follows.-->
+
+        <p>This is the example of <span style = "color:green">span tag</span>
+            and the <span style = "color:red">div tag</span> alongwith CSS</p>
+<br/>
+
+
+<!--Text Abbreviation
+You can abbreviate a text by putting it inside opening <abbr> and closing </abbr> tags.
+ If present, the title attribute must contain this full description and nothing else.-->
+            
+            <p>My name is  <abbr title = "Akshay Rana">AR</abbr>.</p>
+
+            <p>This chapter covers marking up text in <acronym>XHTML</acronym>.</p>
+  <img src="latios.jpg" alt="Latios May Torche" width = "450" height = "300" border = "10" ></img>
+
+
+  <!--  HTML TABLES
+The HTML tables allow web authors to arrange data like text, images, links, other tables,
+ etc.
+ into rows and columns of cells.
+
+The HTML tables are created using the <table> tag in which the <tr> tag is used to create
+     table rows and <td> tag is used to create data cells. The elements under <td> are
+          regular and left aligned by default
+  -->
+
+<br/><br/>
+  <table border = "0">  <!--if 0 then no border-->
+    <tr>
+       <td>Row 1, Column 1</td>
+       <td>Row 1, Column 2</td>
+    </tr>
+    
+    <tr>
+       <td>Row 2, Column 1</td>
+       <td>Row 2, Column 2</td>
+    </tr>
+ </table>
+
+ <!--Colspan and Rowspan Attributes
+    You will use colspan attribute if you want to merge two or more columns into a 
+    single column. Similar way you will use rowspan if you want to merge two or more rows.-->
+ 
+    <table border = "1" background = "latios.jpg">
+        <tr>
+           <th>Column 1</th>
+           <th>Column 2</th>
+           <th>Column 3</th>
+        </tr>
+        <tr>
+           <td rowspan = "2">Row 1 Cell 1</td>
+           <td>Row 1 Cell 2</td>
+           <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+           <td>Row 2 Cell 2</td>
+           <td>Row 2 Cell 3</td>
+        </tr>
+        <tr>
+           <td colspan = "3">Row 3 Cell 1</td>
+        </tr>
+     </table>
+
+<!--HTML Lists-
+    
+    HTML offers web authors three ways for specifying lists of information.
+     All lists must contain one or more list elements. Lists may contain −
+
+    <ul> − An unordered list. This will list items using plain bullets.
+    <ol> − An ordered list. This will use different schemes of numbers to list your items.
+    <dl> − A definition list. This arranges your items in the same way as they are 
+        arranged in a dictionary.
+    -->
+
+     <ul>
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ul>
+
+
+
+      <ol>
+        <li>Beetroot</li>
+        <li>Ginger</li>
+        <li>Potato</li>
+        <li>Radish</li>
+     </ol>
+
+
+     <!--
+         <ol type = "1"> - Default-Case Numerals.
+            <ol type = "I"> - Upper-Case Numerals.
+            <ol type = "i"> - Lower-Case Numerals.
+            <ol type = "A"> - Upper-Case Letters.
+            <ol type = "a"> - Lower-Case Letters.
+                
+            The start Attribute
+You can use start attribute for <ol> tag to specify the starting point of
+     numbering you need. Following are the possible options −
+            -->
+
+
+            <!--
+
+                    HTML Definition Lists
+                    HTML and XHTML supports a list style which is called definition lists where entries are listed like in a dictionary or encyclopedia. The definition list is the ideal way to present a glossary, list of terms, or other name/value list.
+
+                    Definition List makes use of following three tags.
+
+                    <dl> − Defines the start of the list
+                    <dt> − A term
+                    <dd> − Term definition
+                    </dl> − Defines the end of the list
+
+            -->
+
+
+            <!--A webpage can contain various links that take you directly to other pages
+                 and even specific parts of a given page. These links are known as hyperlinks.
+                A link is specified using HTML tag <a>.
+                -->
+
+                <p>Click following link</p>
+                <a href = "https://www.tutorialspoint.com" target="_self" >Tutorials Point</a>
+
+                <!--	
+_blank  -   Opens the linked document in a new window or tab.
+
+_self   -   Opens the linked document in the same frame.
+-->
+<br/>
+<font face = "Comic sans MS" size =" 5">Comic Sans MS</font><br />
+     <!--
+
+A visitor will only be able to see your font if they have that font installed 
+on their computer. So, it is possible to specify two or more font face alternatives 
+by listing the font face names, separated by a comma.
+
+     --> 
+           
+</body>
+</html>

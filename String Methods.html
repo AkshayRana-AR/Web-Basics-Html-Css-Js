@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+
+    <script>
+        //String Methods
+        var myString="Hey, there this is Akshay Rana Akshay this is Akshay Akshay ";
+        console.log(myString.length);  
+        console.log(myString.indexOf("Akshay"));    //returns index by default first       //index -1 if nothing matches
+        console.log(myString.lastIndexOf("Akshay"));    //Returns last occurence index
+        console.log(myString.slice(9,30));  //From 9th index upto n-1  i.e 29 
+        console.log(myString.replace(" ","_")); //Replaces only first occurence     here first space is replaced
+
+        console.log(myString.replaceAll(" ","_")); //Replaces All occurences 
+
+
+    </script>
+    
+</body>
+</html>

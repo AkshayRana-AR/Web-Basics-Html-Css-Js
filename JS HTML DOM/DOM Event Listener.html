@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Listener</title>
+</head>
+<body>
+    <h1>Event Listener</h1>
+    <button id="myBtn">Click Me To See Time</button>
+    <h4 id="demo"></h4>
+    <!--element.addEventListener(event, function, useCapture);-->
+    <p>Try Resizing</p>
+    <script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+
+/*
+The addEventListener() method allows you to add many events to the same element,
+ without overwriting existing events:
+ element.addEventListener("mouseover", myFunction);
+element.addEventListener("click", mySecondFunction);
+element.addEventListener("mouseout", myThirdFunction);
+*/
+
+window.addEventListener("resize", function(){
+  alert("You resized window");
+});
+
+    </script>
+
+</body>
+</html>

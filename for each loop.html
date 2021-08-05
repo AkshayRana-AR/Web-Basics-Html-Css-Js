@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Loop</title>
+</head>
+<body>
+
+    <script>
+//forEach() method calls a function once for each element in an array, in order.
+
+
+        var arr=[1,2,3,4,5,6];
+       
+        arr.forEach(Multiplier);
+
+        function Multiplier(item,index, arr)
+        {
+            arr[index]=item*10;
+        }
+        console.log(arr);
+
+
+       
+        let sum=0;
+        arr.forEach(Add);
+       
+        function Add(item,index,arr)
+        {
+              sum=sum+item;  
+        }
+        
+        console.log("Sum is: "+sum );
+
+        
+    </script>
+    
+</body>
+</html>

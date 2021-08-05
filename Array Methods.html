@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const myArr=[1,2,"Go","VictoryBell",null,true,12.09];
+        console.log("Initial Array is: "+myArr)
+        console.log("Length of Array is: "+myArr.length);
+
+        myArr.pop();
+        console.log("After popping, last element is deleted see : "+myArr);
+
+        myArr.push(1000);
+        console.log("After pushing, an element is added : "+myArr);
+
+        myArr.shift();              //shift removes the first ele
+        console.log("After shifting, first element is deleted see : "+myArr);
+
+        myArr.unshift("AR");              //unshift add the first ele
+        console.log("After unshifting, first element is added see : "+myArr);
+
+        myArr.sort();//sorts the element alphabetically
+        console.log(myArr);
+
+        console.log(myArr.toString());      //converts array into string
+        
+        //As array is an object, we can use delete operator to delete an ele 
+        //but Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+        delete myArr[1];
+        console.log(myArr);
+
+
+        //
+        
+
+</script>
+</body>
+</html>

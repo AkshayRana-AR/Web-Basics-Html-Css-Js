@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Asynchronous</title>
+</head>
+<body>
+    <script>
+    //*****  When you pass a function as an argument, remember not to use parenthesis.
+      
+        console.log(1); 
+        setTimeout(myFunction(), 3000);
+        console.log(2);
+
+        function myFunction()
+        {
+        console.log( "What's up,doc?!");
+        }
+
+
+//When I use parenthesis, I get 1, what's up doc, 3 and the function doesn't wait for 3 second
+//When I use without parenthesis, u get 1, 3, what's up doc and function waits
+
+
+
+    </script>
+</body>
+</html>

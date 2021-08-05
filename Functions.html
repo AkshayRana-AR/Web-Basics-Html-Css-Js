@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Function Definitions:
+
+        //function type 1    //function
+        function aksh(a,b)
+        {
+            return a*b;
+        }
+        console.log("Usual Normal Function: "+aksh(2,4));
+
+
+        //function type 2   //anonymous function
+        var x=function(a,b){return a*b};
+        console.log("Anonymous Function: "+x(5,2));
+
+
+        //arrow function
+        var y=(a,b)=>a*b;
+        console.log("Arrow Function: "+y(2,3));
+
+
+//Function Parameters
+        //Parameters are named variables listed in function declaration
+        //Arguments are real values passed to function
+        function param(x,y,z=2)
+        {
+            console.log(x*y*z);
+            console.log(arguments);
+        }
+        
+        //JS Doesn't Support Method Overloading
+       param(1,2,3,4,5,6);  //all arguments will be passed to the function
+
+
+        //Arguments Object
+        //JavaScript functions have a built-in object called the arguments object.
+        //The argument object contains an array of the arguments used when the function was called (invoked).
+        //This way you can simply use a function to find (for instance) max value or sum in a list of numbers:
+
+        function argsum()
+        {
+            let sum=0;
+            for(let i=0;i<arguments.length;i++)
+            {
+                sum=sum+arguments[i];
+            }
+            console.log("Sum of elements is: "+sum);
+        }
+        argsum(1,2,3,4,6,7,9,85);
+
+        function argmax()
+        {
+            let max=-Infinity;
+            for(let i=0;i<arguments.length;i++)
+            {
+                if(arguments[i]>max)
+                {
+                    max=arguments[i];
+                }
+            }
+            console.log("Max in elements is: "+max);
+        }
+        argmax(123,2323,45,2,232,3,444,3332,2322,34);
+
+        //Arguments are Passed by Value         //If a function changes an argument's value, it does not change the parameter's original value.
+        //Objects are Passed by Reference       //i.mIf a function changes an object property, it changes the original value.
+
+
+//Function Invocation:      
+
+        //It is common to use the term "call a function" instead of "invoke a function".
+
+
+        //Invoking a Function as a Function
+        function myFunction(a, b) 
+        {
+            return a * b;
+        }
+            myFunction(10, 2);           // Will return 20
+
+
+
+        //Invoking a Function as a Method
+        var personObject={
+            firstName:"Akshay",
+            lastName:"Rana",
+            fullName:function(){
+                return this.firstName+" "+this.lastName+"!";
+            }
+        }
+        console.log(personObject.fullName());
+
+
+//Function Call
+        //Advanced 
+        //Call Method
+
+        //With call(), an object can use a method belonging to another object.
+        var personbase={
+            fullName:function(){
+                return this.firstName+" "+this.lastName+"!";
+            }
+        }
+
+        var person1={
+            firstName:"Akshay",
+            lastName:"Rana"
+        }
+        var person2={
+            firstName:"A",
+            lastName:"R"
+        }
+
+        console.log(personbase.fullName.call(person2));
+        console.log(personbase.fullName.call(person1));
+
+
+        //The call() Method with Arguments
+        //The call() method can accept arguments:
+
+        var person = {
+        fullName: function(city, country) {
+            return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+        }
+
+        const personOne = {
+        firstName:"Akshay",
+        lastName: "Rana"
+        }
+
+       console.log(person.fullName.call(personOne, "Godhra", "India"));
+
+
+
+
+//Function Apply
+
+        </script>
+
+
+
+</body>
+</html>
